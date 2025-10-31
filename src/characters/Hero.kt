@@ -3,14 +3,14 @@ package characters
 import world.Quest
 
 class Hero(
-    var name: String,
+    name: String,
     var gender: String = "",
     var role: String = "",
-    var hp: Int,
+    hp: Int = 100,
     var mp: Int = 0,
     var level: Int = 1,
-    var element: String = ""
-) {
+    element: String = ""
+) : GameCharacter(name, hp, element ){
     fun sayHello() {
         println("Я - $name, мой путь только начинается!")
     }

@@ -1,6 +1,8 @@
 package characters
 
-class Enemy(val name: String, var hp: Int, val element: String = "") {
+open class Enemy(name: String,
+                 hp: Int = 0,
+                 element: String = "Неизвестный") : GameCharacter(name, hp, element ){
     fun takeDamage(amount: Int) {
         println("$name получает $amount урона")
         hp -= amount

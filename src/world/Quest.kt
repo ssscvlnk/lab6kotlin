@@ -1,8 +1,12 @@
 package world
 
-class Quest(val title: String, val duration: Int, val reward: Int, val difficulty: String) {
-    fun printInfo() {
-        println("Название квеста: ${this.title}\n Время выполнения: ${this.duration}\n Награда: ${this.reward}\n золотых Уровень сложности: ${this.difficulty}")
+class Quest(title: String, reward: Int,val duration: Int,val difficulty: String): Mission(reward, title) {
+//    fun printInfo() {
+//        println("Название квеста: ${this.title}\n Время выполнения: ${this.duration}\n Награда: ${this.reward}\n золотых Уровень сложности: ${this.difficulty}")
+//    }
+
+    override fun describe() {
+        println("Квест $title на $duration часов, сложность: $difficulty, награда: $reward золотых")
     }
     fun isHard(): Boolean {
         return difficulty.lowercase() == "сложный"
