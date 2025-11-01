@@ -2,6 +2,7 @@ package characters
 import world.Quest
 import world.QuestType
 fun main() {
+
     //step 1
 //    val quest = world.Quest("Охота на гоблинов", 2,3400,"легкий")
 //    quest.printInfo()

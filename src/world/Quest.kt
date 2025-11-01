@@ -10,7 +10,6 @@ class Quest(
     fun printInfo() {
         println("Название квеста: ${this.title}\n Время выполнения: ${this.duration}\n Награда: ${this.reward}\n золотых Уровень сложности: ${this.difficulty}, тип квеста: ${questType.description}")
     }
-
     override fun describe() {
         println("Квест $title на $duration часов, сложность: $difficulty, награда: $reward золотых, тип квеста: ${questType.description}")
     }

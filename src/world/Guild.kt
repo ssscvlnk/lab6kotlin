@@ -1,5 +1,4 @@
 package world
-
 import world.Quest
 
 fun main() {

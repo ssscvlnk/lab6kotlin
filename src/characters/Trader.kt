@@ -1,5 +1,6 @@
 package characters
 import world.Quest
+
 class Trader(
     val name: String,
     private val quests: MutableList<Quest> = mutableListOf()
