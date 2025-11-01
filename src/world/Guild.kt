@@ -3,6 +3,13 @@ package world
 import world.Quest
 
 fun main() {
+    val escortQuest = Quest("Сопровождение торговца",
+        120,
+        4,
+        "Легкий",
+        QuestType.ESCORT
+    )
+    escortQuest.printInfo()
 //    val quest = Quest("Побег из замка", 5, 700, "Сложный")
 //    println("Квест сложный? ${quest.isHard()}")
 //    val quest1 = Quest("Охота", 2, 300, "Сложный")
@@ -21,14 +28,14 @@ fun main() {
 //    println("\nИнформация о спецоперации:")
 //    println("Название: ${specialOp.title}")
 //    specialOp.showReward()
-    val missions = listOf<Mission>(
-        Quest("Охота на монстров", 600, 3, "Средний"),
-        SpecialOperation("Ночной рейд", 1500, 2, true),
-        Contract("Сопровождение каравана", "Гильдия Торговцев", "Доставить груз через лес",800,true)
-    )
-    for (mission in missions) {
-        mission.describe()
-        println("Высокая награда? ${if (mission.isHighReward()) "Да" else "Нет"}")
-        println()
-    }
+//    val missions = listOf<Mission>(
+//        Quest("Охота на монстров", 600, 3, "Средний"),
+//        SpecialOperation("Ночной рейд", 1500, 2, true),
+//        Contract("Сопровождение каравана", "Гильдия Торговцев", "Доставить груз через лес",800,true)
+//    )
+//    for (mission in missions) {
+//        mission.describe()
+//        println("Высокая награда? ${if (mission.isHighReward()) "Да" else "Нет"}")
+//        println()
+//    }
 }

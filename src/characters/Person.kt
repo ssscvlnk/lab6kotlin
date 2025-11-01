@@ -1,5 +1,6 @@
 package characters
-
+import world.Quest
+import world.QuestType
 fun main() {
     //step 1
 //    val quest = world.Quest("Охота на гоблинов", 2,3400,"легкий")
@@ -45,10 +46,16 @@ fun main() {
 //    dragon.startPhase(2)
 //    println(dragon.dropLoot())
 //    dragon.takeDamage(150)
-    val enemy: GameCharacter = Enemy("Джин")
-    val hero: GameCharacter = Hero("Наруто")
-    val npc: GameCharacter = NPC("Торговец")
-    println(enemy.name)
-    (enemy as Enemy).takeDamage(20)
-    enemy.takeDamage(20)
+//    val enemy: GameCharacter = Enemy("Джин")
+//    val hero: GameCharacter = Hero("Наруто")
+//    val npc: GameCharacter = NPC("Торговец")
+//    println(enemy.name)
+//    (enemy as Enemy).takeDamage(20)
+//    enemy.takeDamage(20)
+    val trader = Trader("Ральф")
+    trader.addQuest(Quest("Собрать травы", 50,2, "Легкий", QuestType.DELIVERY))
+    trader.addQuest(Quest("Убить волков", 100,3, "Средний", QuestType.ELIMINATION))
+    trader.showAvailableQuest()
+    val selectedQuest = trader.giveQuest(1)
+    selectedQuest.describe()
 }
