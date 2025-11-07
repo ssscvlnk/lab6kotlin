@@ -2,13 +2,32 @@ package world
 import world.Quest
 
 fun main() {
-    val escortQuest = Quest("Сопровождение торговца",
-        120,
-        4,
-        "Легкий",
-        QuestType.ESCORT
-    )
-    escortQuest.printInfo()
+    //homework8 1
+    val quest1 = Quest("Доставка зелья", 100, 2, "Лёгкий", QuestType.DELIVERY)
+    val quest2 = Quest("Охота на волков", 250, 4, "Средний", QuestType.ELIMINATION)
+    val quest3 = Quest("Сопровождение торговца", 300, 5, "Средний", QuestType.ESCORT)
+    val quest4 = Quest("Исследование руин", 400, 6, "Сложный", QuestType.EXPLORE)
+    val quest5 = Quest("Битва с драконом", 1000, 10, "Сложный", QuestType.BOSSFIGHT)
+    val quest6 = Quest("Разведка нового континента", 600, 8, "Сложный", QuestType.EXPLORE)
+    val quests = listOf(quest1, quest2, quest3, quest4, quest5, quest6)
+    println("Информация обо всех квестах:")
+    for (q in quests) {
+        q.describe()
+        q.printInfo()
+        println()
+    }
+    println("Только квесты типа EXPLORE:")
+    quest1.printExploreQuests(quests)
+    //2
+    val trader = Trader()
+    trader.start()
+//    val escortQuest = Quest("Сопровождение торговца",
+//        120,
+//        4,
+//        "Легкий",
+//        QuestType.ESCORT
+//    )
+//    escortQuest.printInfo()
 //    val quest = Quest("Побег из замка", 5, 700, "Сложный")
 //    println("Квест сложный? ${quest.isHard()}")
 //    val quest1 = Quest("Охота", 2, 300, "Сложный")
